@@ -1,0 +1,38 @@
+#!/bin/python3
+
+import os
+import sys
+import array
+
+#
+# Complete the simpleArraySum function below.
+#
+def simpleArraySum(arr):
+    return (sum(arr))
+    #
+    # Write your code here.
+    #
+    arr=[]
+    # arr = array[ar_count]
+    # result1 = 0
+    arr = [1,2,3,4,10,11]
+    n = len(arr)
+    ans = simpleArraySum(arr,n)
+
+    # for i in ar_count:
+        # result1 = arr[i]
+        # ar = result1+result1
+    print (ans)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = simpleArraySum(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
